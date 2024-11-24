@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+import { createElement } from '@lwc';
 import CurrencyConverter from 'c/currencyConverter';
 
 describe('c-currency-converter', () => {

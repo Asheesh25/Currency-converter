@@ -1,0 +1,38 @@
+:host(){
+    --button-color: #7dcea0;
+    --card-color: #27ae60;
+}
+
+.currency-app{
+    background: url('/sfsites/c/resource/currencyBackground');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.custom-card{
+    min-width: 400px;
+    max-width: 500px;
+    background-color: var(--card-color);
+    border-radius: 25px;
+    padding: 16px;
+}
+
+button, button:hover, button:active{
+    background-color: var(--button-color);
+    padding: 12px;
+    font-size: 25px;
+    margin-top: 12px;
+}
+
+.slds-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
