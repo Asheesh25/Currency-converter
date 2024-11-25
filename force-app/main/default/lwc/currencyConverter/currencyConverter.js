@@ -1,11 +1,9 @@
 import { LightningElement } from 'lwc';
 import {countryCodeList} from 'c/countryCodeList';
-// import bgImage from '@salesforce/resourceUrl/currencyBackground';
 export default class CurrencyConverter extends LightningElement {
     codeList = countryCodeList;
     countryFrom = 'USD';
     countryTo = 'AUD';
-    // bgImg = bgImage;
 
     connectedCallback(){
         console.log('Country code list is ', this.codeList);
@@ -15,7 +13,18 @@ export default class CurrencyConverter extends LightningElement {
     handleChange(event){
         const {name,value} = event.target;
         this[name] = value;
-        // console.log('Value is ',value,'and country from is ',this.countryFrom);
-        // console.log('Value is ',value,' and country to is ',this.countryTo);
+    }
+
+    submitHandler(event){
+        event.preventDefault();
+        this.convert();
+    }
+
+    async convert(){
+        let from = 'EUR';
+        let to = 'GBP';
+        let amount = '10';
+
+        const apiURL = `https://api.exchangerate.host/' + endpoint + '?access_key=' + access_key +'&from=' + from + '&to=' + to + '&amount=' + amount`;
     }
 }

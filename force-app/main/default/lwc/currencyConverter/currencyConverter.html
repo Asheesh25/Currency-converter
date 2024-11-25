@@ -2,7 +2,7 @@
     <div class="currency-app"> <!--Wrapper class which is app background-->
         <div class="container"> <!-- Brings our card to the center-->
             <div class="slds-card custom-card">
-                <form>
+                <form onsubmit={submitHandler}>
                     <h1 class="slds-text-heading_large slds-text-align_center 
                                slds-m-bottom_large">Currency Converter
                     </h1>
@@ -21,7 +21,7 @@
                             </lightning-combobox>
                         </div>
                         <div class="slds-col">
-                            <lightning-icon icon-name='action:change_record_type' alternative-text='change_record_type' size='medium' title='Convert Icon'></lightning-icon>
+                            <lightning-icon icon-name='action:change_record_type' alternative-text='change_record_type' size='medium' title='Convert Icon' class="custom-icon"></lightning-icon>
                         </div>
                         <div class="slds-col">
                             <lightning-combobox
